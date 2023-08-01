@@ -27,5 +27,3 @@ def generate_password(passwordLength=8, IncludeLowerCaseCharters=True, IncludeUp
     password = ''.join(random.choice(characters) for _ in range(passwordLength))
     return password
 
-password = generate_password(passwordLength=24, IncludeLowerCaseCharters=False, IncludeUpperCaseCharters=False, IncludeSymbols=True, IncludeNumbers=True, ExcludeSimilarCharacters=True, ExcludeAmbiguousCharacters=True)
-print(password)

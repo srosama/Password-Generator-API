@@ -18,6 +18,10 @@ def generate_Password():
         IncludeLowerCaseCharters = passwordData['IncludeLowerCaseCharters'] 
         IncludeUpperCaseCharters = passwordData['IncludeUpperCaseCharters'] 
         ExcludeSimilarCharacters = passwordData['ExcludeSimilarCharacters'] 
-        ExcludeAmbiguousCharaters = passwordData['ExcludeAmbiguousCharaters'] 
-        # generate_password()
+        ExcludeAmbiguousCharacters = passwordData['ExcludeAmbiguousCharaters'] 
+        passwordGenerated = generate_password(passwordLength=passwordLength, IncludeSymbols=IncludeSymbols,IncludeNumbers=IncludeNumbers\
+                                              ,IncludeLowerCaseCharters=IncludeLowerCaseCharters,IncludeUpperCaseCharters=IncludeUpperCaseCharters,\
+                                                ExcludeSimilarCharacters=ExcludeSimilarCharacters,ExcludeAmbiguousCharacters=ExcludeAmbiguousCharacters)
+        return jsonify(passwordGenerated=passwordGenerated)
+
     return json.dumps(greeting)
